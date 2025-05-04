@@ -12,7 +12,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Expose the port (Render sets PORT env var)
-EXPOSE 10000
+EXPOSE 5000
 
 # Start the Flask app
 CMD ["python", "app.py"]
