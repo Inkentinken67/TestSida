@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* styles.css */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start in the center */
+    bottom: -2px;  /* Adjust this to fine-tune the distance from the text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* Underline color */
+    transform: translateX(-50%); /* Move the underline to be centered */
+    transition: all 0.4s ease;
+  }
+  
+  .underline-animation:hover::after {
+    width: 100%;
+    left: 50%; /* Stretch the underline to the left */
+  }
+  
+  
